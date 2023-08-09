@@ -1,0 +1,6 @@
+.menu-box {
+    position: relative;
+    overflow: hidden;
+    min-height: 100%;
+    width: 100%;
+}

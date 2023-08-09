@@ -1,0 +1,113 @@
+.arrow-button-{
+    opacity: 0%;
+}
+
+.arrow-button-new {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    color: black;
+    text-align: center;
+    font-family: 'dita';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5vh;
+    width: 30%;
+    margin: 0.25%; 
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 5px;
+    animation: comeBack .3s ease
+}
+
+@keyframes comeBack {
+    0% {
+        transform: scale(0%);
+    }
+    100% {
+        transform: scale(100%);
+    }
+}
+
+
+
+.arrow-button-win1 {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    color: black;
+    text-align: center;
+    font-family: 'dita';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5vh;
+    width: 30%;
+    margin: 0.25%; 
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 5px;
+    animation: 1s ease correct;
+    pointer-events: none;
+}
+
+@keyframes correct {
+    0%{
+        color: white;
+        background-color: white;
+    }
+    100%{
+        color: #38c219;
+        background-color: #38c219;
+    }
+}
+
+.arrow-button-win2 {
+    background-color: #38c219;
+    border: none;
+    cursor: pointer;
+    color: #38c219;
+    text-align: center;
+    font-family: 'dita';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5vh;
+    width: 30%;
+    margin: 0.25%; 
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 5px;
+    animation: .3s ease goAway;
+    pointer-events: none;
+}
+
+@keyframes goAway {
+    0% {
+        transform: scale(100%);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+.arrow-button-win3 {
+    opacity: 0;
+}
+
+.arrow-button-new:hover{
+    background-color: #383838;
+    color: white;
+}
+
+.arrow-button-new:active {
+    animation: onPress .3s ease 0s 1 normal forwards
+}
+
+@keyframes onPress {
+    0% {
+        transform: scale(1);
+    }
+    
+    100% {
+        transform: scale(.92);
+    }
+}

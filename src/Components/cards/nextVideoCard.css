@@ -1,0 +1,61 @@
+.video-card2 {
+    width: 33.3333%;
+}
+
+.about2 {
+    width: 50vw;
+    top: 25%;
+    color: #fff;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    justify-content: center;
+    z-index: 2;
+  }
+
+.title2 {
+    font-family: "dita", sans-serif;
+    margin-bottom: 0;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 5vh;
+}
+
+.is-trending2-show {
+    font-family: 'dita';
+    font-weight: 300;
+    font-style: normal;
+}
+
+.is-trending2- {
+    font-family: 'dita';
+    font-weight: 300;
+    font-style: normal;
+    animation: fade 1s ease;
+}
+
+@keyframes fade {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.actions {
+    margin-top: 1%;
+    z-index: 4;
+}
+
+.background2 {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    filter: brightness(30%)
+}

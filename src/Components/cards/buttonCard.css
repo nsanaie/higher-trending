@@ -1,0 +1,7 @@
+.game-buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 0;
+    align-items: center;
+}

@@ -1,0 +1,40 @@
+.video-card1 {
+    width: 33.3333%;
+}
+
+.about1 {
+    width: 50vw;
+    top: 25%;
+    position: absolute;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    justify-content: center;
+    z-index: 2;
+  }
+
+.title1 {
+    font-family: "dita", sans-serif;
+    margin-bottom: 0;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 5vh;
+}
+
+.trending1 {
+    font-family: 'dita';
+    font-weight: 300;
+    font-style: normal;
+}
+
+.background1 {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    filter: brightness(30%)
+}

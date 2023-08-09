@@ -1,0 +1,138 @@
+.game-handler {
+    overflow: hidden;
+    height: 100%;
+    width: 100%
+}
+
+.score {
+    margin-top: 1%;
+    margin-left: 1%;
+    font-family: 'dita', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2.5vh;
+    color: white;
+    position: absolute;
+    z-index: 1;
+}
+
+.bar1-win1 {
+    height: 47%;
+    width: 2px;
+    left: 49.94%;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+}
+
+.bar1-win2 {
+    height: 47%;
+    width: 2px;
+    left: 49.94%;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    animation: slideDownTop .5s ease-out 0s 1 normal forwards;
+}
+
+@keyframes slideDownTop {
+	0% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(-100%);
+	}
+}
+
+.bar1-new {
+    height: 47%;
+    width: 2px;
+    left: 49.94%;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    animation: slideBackTop .3s ease-out 0s 1 normal forwards;
+}
+
+@keyframes slideBackTop {
+	0% {
+		transform: translateY(-100%);
+	}
+
+	100% {
+		transform: translateY(0%);
+	}
+}
+
+.bar2-win1 {
+    height: 48%;
+    width: 2px;
+    top: 53%;
+    left: 49.94%;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+}
+
+.bar2-win2 {
+    height: 48%;
+    width: 2px;
+    top: 53%;
+    left: 49.94%;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    animation: slideDownBot .5s ease-out 0s 1 normal forwards;
+}
+
+@keyframes slideDownBot {
+	0% {
+		transform: translateY(0%);
+	}
+
+	100% {
+		transform: translateY(100%);
+	}
+}
+
+.bar2-new {
+    height: 48%;
+    width: 2px;
+    top: 53%;
+    left: 49.94%;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    animation: slideBackBot .3s ease-out 0s 1 normal forwards;
+}
+
+@keyframes slideBackBot {
+	0% {
+		transform: translateY(100%);
+	}
+
+	100% {
+		transform: translateY(0%);
+	}
+}
+
+.vs-circle {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 6%;
+    aspect-ratio: 1/1;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.arrow {
+    position: relative;
+    margin-top: 17.5%;
+    height: 67%;
+}
