@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import GameButton from '../buttons/gameButton';
+import GameButton1 from '../buttons/gameButton1';
+import GameButton2 from '../buttons/gameButton2';
 
 import './buttonCard.css';
 
@@ -11,8 +12,8 @@ export default class ButtonCard extends Component {
         }
             return (
                 <div className='game-buttons'>
-                    <GameButton class='higher' onClickHandler={this.props.onHigher} content="HIGHER" state={this.props.state}/>
-                    <GameButton class='lower' onClickHandler={this.props.onLower} content="LOWER" state={this.props.state}/>
+                    <GameButton1 class='higher' onClickHandler={this.props.onHigher} content="HIGHER" state={this.props.state}/>
+                    <GameButton2 class='lower' onClickHandler={this.props.onLower} content="LOWER" state={this.props.state}/>
                 </div>
             );
     }

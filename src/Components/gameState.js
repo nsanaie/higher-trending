@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Game from './game';
+import EndMenu from './endMenu';
 
 import './gameState.css'
 
@@ -54,7 +55,9 @@ export default class GameState extends Component{
     render(){
         if (!this.state.playing){
             return(
-                <h1>you lose D:</h1>
+                <EndMenu 
+                startGameFunction={this.props.startGameFunction}
+                score={this.state.score}/>
             )
         }
         return(

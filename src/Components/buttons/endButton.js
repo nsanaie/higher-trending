@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import './menuButton.css';
+import './endButton.css';
 
-export default class MenuButton extends Component {
+export default class EndButton extends Component {
 
     render() {
         return (

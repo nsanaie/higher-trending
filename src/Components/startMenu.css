@@ -1,11 +1,11 @@
-.menu-box {
+.start-menu{
     position: relative;
     overflow: hidden;
     min-height: 100%;
     width: 100%;
 }
 
-.loading-text {
+.intro {
     margin: auto;
     padding-top: 20%;
     text-align: center;

@@ -10,7 +10,9 @@ export default class Main extends Component {
         super(props);
 
         this.startGame = this.startGame.bind(this);
+        this.restartGame = this.restartGame.bind(this);
         this.loadVideos = this.loadVideos.bind(this);
+        this.loadingHolder = this.loadingHolder.bind(this);
 
         this.state = { 
             gameStart: false, 
@@ -57,18 +59,41 @@ export default class Main extends Component {
                     loaded: true
                 })
             })
-        }, 1000);
+        }, 2000);
     }
     
     startGame(){    
+        console.log("restart")
         return this.setState({ gameStart: true })
+    }
+
+    restartGame(){
+        this.setState({ loaded: false })
+        this.setState({ gameStart: false })
+        setTimeout(() => {
+            this.loadVideos().then(videos => {
+                this.setState({
+                    videos: videos,
+                    loaded: true
+                })
+            })
+        }, 2000);
+    }
+
+    loadingHolder(){
+        return 0;
     }
 
     render() {
         return (
             <div className='menu-box'>
-                {this.state.loaded ? this.state.gameStart ? <GameState videos={this.state.videos}/> : <StartMenu startGameFunction={this.startGame}/> : <h1>loading</h1>}
+                {this.state.loaded ? this.state.gameStart ? <GameState videos={this.state.videos} startGameFunction={this.restartGame}/> : <StartMenu text="START" startGameFunction={this.startGame}/> : <StartMenu text="loading" startGameFunction={this.loadingHolder}/>}
             </div>
         );
     }
 }
+
+// add "about" page
+// add end game meny
+// add trending count to the left card
+// clean up in game buttons

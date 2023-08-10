@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import './gameButton.css'
+import './gameButton1.css'
 
-export default class GameButton extends Component {
+export default class GameButton1 extends Component {
 
     render() {
         return (
