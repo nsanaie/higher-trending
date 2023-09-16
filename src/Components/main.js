@@ -94,6 +94,5 @@ export default class Main extends Component {
 }
 
 // add "about" page
-// add end game meny
 // add trending count to the left card
 // clean up in game buttons
