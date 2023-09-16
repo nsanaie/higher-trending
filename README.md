@@ -1,8 +1,8 @@
-# [which is trending higher?](https://nsanaie.github.io/higherlower-trending/)
+# [trending? game](https://nsanaie.github.io/higherlower-trending/)
 
 ## Description
 
-higher? is a "higher or lower" parody game where users can attempt to reach new high scores by guessing which youtube video is higher on the trending charts. The app is built using the React framework with JavaScript and HTML/CSS. 
+trending? is a "higher or lower" parody game where users can attempt to reach new high scores by guessing which youtube video is higher on the trending charts. The app is built using the React framework with JavaScript and HTML/CSS. 
 
 ## Data
 
