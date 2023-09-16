@@ -1,4 +1,4 @@
-# Which video is trending higher?
+# [Which video is trending higher?]
 
 A "higher or lower" parody game that allows users to guess which currently trending youtube video is trending higher, with the goal to get as high of a score as possible.
 
