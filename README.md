@@ -12,3 +12,4 @@ The game relies on data provided in realtime by the [Youtube Data API v3](https:
 
 - high score counter
 - trending status on current video
+- fix lower quality thumbnails not being displayed
