@@ -90,11 +90,11 @@
     color: white;
 }
 
-.arrow-button2-new:active {
+/* .arrow-button2-new:active {
     animation: onPress .3s ease 0s 1 normal forwards
-}
+} */
 
-@keyframes onPress {
+/* @keyframes onPress {
     0% {
         transform: scale(1);
     }
@@ -102,4 +102,4 @@
     100% {
         transform: scale(.92);
     }
-}
+} */

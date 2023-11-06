@@ -4,6 +4,7 @@ import './gameButton1.css'
 
 export default class GameButton1 extends Component {
 
+
     render() {
         return (
             <button className={"arrow-button-" + this.props.state} onClick={this.props.onClickHandler}>{this.props.content}

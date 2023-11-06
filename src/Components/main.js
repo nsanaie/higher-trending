@@ -37,8 +37,20 @@ export default class Main extends Component {
             unshuffledVideos[i].trending = i+1;
             let title = unshuffledVideos[i].snippet.title;
             unshuffledVideos[i].snippet.title = '"' + title + '"';
-            if (!('maxres' in unshuffledVideos[i].snippet.thumbnails)){
-                unshuffledVideos[i].snippet.thumbnails.maxres = {url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg"}
+            // if (!('maxres' in unshuffledVideos[i].snippet.thumbnails)){
+            //     unshuffledVideos[i].snippet.thumbnails.maxres = {url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg"}
+            // }
+            let max = -1
+            let tUrl = null
+            for (var key in unshuffledVideos[i].snippet.thumbnails){
+                let res = unshuffledVideos[i].snippet.thumbnails[key].width * unshuffledVideos[i].snippet.thumbnails[key].height
+                if (res > max){
+                    max = res
+                    tUrl = unshuffledVideos[i].snippet.thumbnails[key].url
+                }
+            }
+            unshuffledVideos[i].snippet.thumbnails.maxres = {
+                url: tUrl
             }
         }
         let shuffledVideos = unshuffledVideos
@@ -47,7 +59,6 @@ export default class Main extends Component {
             .map(({ value }) => value)
 
         console.log("loaded!")
-        console.log(unshuffledVideos)
         return shuffledVideos;
     }
 
@@ -59,11 +70,10 @@ export default class Main extends Component {
                     loaded: true
                 })
             })
-        }, 2000);
+        }, 750);
     }
     
-    startGame(){    
-        console.log("restart")
+    startGame(){
         return this.setState({ gameStart: true })
     }
 
@@ -77,7 +87,7 @@ export default class Main extends Component {
                     loaded: true
                 })
             })
-        }, 2000);
+        }, 750);
     }
 
     loadingHolder(){

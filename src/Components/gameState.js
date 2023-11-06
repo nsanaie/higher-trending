@@ -46,7 +46,6 @@ export default class GameState extends Component{
     }
     
     roundLoss(){
-        console.log("loss")
         this.setState({
             playing: false
         })
