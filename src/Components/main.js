@@ -22,44 +22,8 @@ export default class Main extends Component {
 
 
     async loadVideos(){
-        let unshuffledVideos = [];
-        let popURL = 'https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=50&key=AIzaSyCk_fD6qrE5WsxDBxsq81ivcY06nRxUXYA';
-        let response = await fetch(popURL);
-        let data = await response.json();
-        unshuffledVideos = unshuffledVideos.concat(data.items);
-        while (data.nextPageToken != null){
-            popURL = popURL + "&pageToken=" + data.nextPageToken;
-            response = await fetch(popURL);
-            data = await response.json();
-            unshuffledVideos = unshuffledVideos.concat(data.items);
-        }
-        for (let i=0; i<unshuffledVideos.length; i++){
-            unshuffledVideos[i].trending = i+1;
-            let title = unshuffledVideos[i].snippet.title;
-            unshuffledVideos[i].snippet.title = '"' + title + '"';
-            // if (!('maxres' in unshuffledVideos[i].snippet.thumbnails)){
-            //     unshuffledVideos[i].snippet.thumbnails.maxres = {url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg"}
-            // }
-            let max = -1
-            let tUrl = null
-            for (var key in unshuffledVideos[i].snippet.thumbnails){
-                let res = unshuffledVideos[i].snippet.thumbnails[key].width * unshuffledVideos[i].snippet.thumbnails[key].height
-                if (res > max){
-                    max = res
-                    tUrl = unshuffledVideos[i].snippet.thumbnails[key].url
-                }
-            }
-            unshuffledVideos[i].snippet.thumbnails.maxres = {
-                url: tUrl
-            }
-        }
-        let shuffledVideos = unshuffledVideos
-            .map(value => ({ value, sort: Math.random() }))
-            .sort((a,b) => a.sort - b.sort)
-            .map(({ value }) => value)
-
-        console.log("loaded!")
-        return shuffledVideos;
+        const videos = await fetch("https://trending-loader.onrender.com/data")
+        return await videos.json();
     }
 
     componentDidMount() {
@@ -70,7 +34,7 @@ export default class Main extends Component {
                     loaded: true
                 })
             })
-        }, 750);
+        });
     }
     
     startGame(){
